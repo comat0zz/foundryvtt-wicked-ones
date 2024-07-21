@@ -17,9 +17,9 @@ export async function wickedRoll(dice_amount, attribute_name = "", position = "d
 
   let r = new Roll( `${dice_amount}d6`, {} );
 
-  r.evaluate({async: true});
+  await r.evaluate();
 
-  return await showChatRollMessage(r, zeromode, attribute_name, position, effect, type, char_name, dice3dDelay)
+  return await await showChatRollMessage(r, zeromode, attribute_name, position, effect, type, char_name, dice3dDelay)
 
 }
 
@@ -40,7 +40,7 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
   if (speaker.alias == char_name) {
     char_name = "";
   }
-  let isBelow070 = isNewerVersion('0.7.0', game.version ?? game.data.version);
+  let isBelow070 = foundry.utils.isNewerVersion('0.7.0', game.version ?? game.data.version);
   let rolls = [];
   let attribute_label = WickedHelpers.getAttributeLabel(attribute_name);
 
@@ -53,6 +53,14 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
 
   // Retrieve Roll status.
   let roll_status = getWickedRollStatus(rolls, zeromode);
+
+  // Check and log if Dice Configuration is Manual
+  let method = {};
+  method.type = (r.terms)[0].method;
+  if( method.type ) {
+    method.icon = CONFIG.Dice.fulfillment.methods[method.type].icon;
+    method.label = CONFIG.Dice.fulfillment.methods[method.type].label;
+  }
 
   let position_localize = '';
   switch (position) {
@@ -114,18 +122,27 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
     }
   }
 
-  let result = await renderTemplate("systems/wicked-ones/templates/wicked-roll.html", { rolls: rolls, roll_type: roll_type, roll_status_class: roll_status, roll_status_text: roll_status_text, attribute_label: attribute_label, position: position_localize, effect: effect_localize, roll_description: roll_description, zeromode: zeromode, char_name: char_name });
+  let result = await renderTemplate("systems/wicked-ones/templates/wicked-roll.html", { rolls: rolls, method: method, roll_type: roll_type, roll_status_class: roll_status, roll_status_text: roll_status_text, attribute_label: attribute_label, position: position_localize, effect: effect_localize, roll_description: roll_description, zeromode: zeromode, char_name: char_name });
 
-  let messageData = {
-    user: game.user.id,
-    speaker: speaker,
-    content: result,
-    type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-  }
-  if (!game.dice3d || !dice3dDelay){
-    messageData.roll = r
-    messageData.sound = CONFIG.sounds.dice
-  }
+  let messageData;
+if (game.version >= 12) {
+	messageData = {
+		user: game.user.id,
+		speaker: speaker,
+		content: result,
+		sound: CONFIG.sounds.dice,
+		rolls: [r]
+		}
+	} else {
+		messageData = {
+			user: game.user.id,
+			speaker: speaker,
+			content: result,
+			type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+			sound: CONFIG.sounds.dice,
+			rolls: [r]
+		}
+	}
 
   // Prepare message options
   const rMode = game.settings.get("core", "rollMode");
@@ -153,9 +170,9 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
 export function getWickedRollStatus(rolls, zeromode = false) {
 
   // Dice API has changed in 0.7.0 so need to keep that in mind.
-  let isBelow070 = isNewerVersion('0.7.0', game.version ?? game.data.version);
+  let isBelow070 = foundry.utils.isNewerVersion('0.7.0', game.version ?? game.data.version);
 
-  let sorted_rolls = [];
+  let sorted_rolls; //= [];
   // Sort roll values from lowest to highest.
   if (isBelow070) {
     sorted_rolls = rolls.map(i => i.roll).sort();

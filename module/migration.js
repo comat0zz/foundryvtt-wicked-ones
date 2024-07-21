@@ -3,7 +3,7 @@
  * @return {Promise}      A Promise which resolves once the migration is completed
  */
 export const migrateWorld = async function() {
-  ui.notifications.info(`Applying WO Actors migration for version ${game.system.data.version}. Please be patient and do not close your game or shut down your server.`, {permanent: true});
+  ui.notifications.info(`Applying WO Actors migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`, {permanent: true});
 
   // Migrate World Actors
   for ( let a of game.actors.entities ) {
@@ -21,8 +21,8 @@ export const migrateWorld = async function() {
   }
 
   // Set the migration as complete
-  game.settings.set("wicked-ones", "systemMigrationVersion", game.system.data.version);
-  ui.notifications.info(`WO System Migration to version ${game.system.data.version} completed!`, {permanent: true});
+  game.settings.set("wicked-ones", "systemMigrationVersion", game.system.version);
+  ui.notifications.info(`WO System Migration to version ${game.system.version} completed!`, {permanent: true});
 };
 
 /* -------------------------------------------- */

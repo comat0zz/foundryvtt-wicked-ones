@@ -1,17 +1,19 @@
 {
   "title": "Wicked Ones",
   "description": "Official system for the Wicked Ones game made by Bandit Camp. Including official compendium content, all you need to slay some adventurers!",
-  "version": "WILL BE AUTO REPLACED",
+  "version": "1.1.2",
   "background": "systems/wicked-ones/styles/assets/images/WO-Header.webp",
   "authors": [
     {
       "name": "Spearhead",
       "email": "Eike.Hanus@T-Online.de",
-      "discord": "Spearhead#4288"
+      "discord": "Spearhead#4288",
+      "flags": {}
     },
     {
       "name": "LorduFreeman",
-      "discord": "LorduFreeman#8747"
+      "discord": "LorduFreeman#8747",
+      "flags": {}
     }
   ],
   "esmodules": [
@@ -24,226 +26,330 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     }
   ],
-  "url": "https://github.com/eHanus/foundryvtt-wicked-ones/",
-  "manifest": "https://raw.githubusercontent.com/eHanus/foundryvtt-wicked-ones/releases/latest/download/system.json",
-  "download": "https://github.com/eHanus/foundryvtt-wicked-ones/releases/latest/download/system.zip",
+  "url": "https://github.com/eHanus/foundryvtt-wicked-ones",
+  "manifest": "https://github.com/eHanus/foundryvtt-wicked-ones/releases/latest/download/system.json",
+  "download": "https://github.com/eHanus/foundryvtt-wicked-ones/releases/download/1.1.2/system.zip",
   "packs": [
     {
       "name": "adventurer",
       "label": "Adventurers",
       "system": "wicked-ones",
-      "path": "packs/adventurers.db",
+      "path": "packs/adventurers",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "calling",
       "label": "Callings",
       "system": "wicked-ones",
-      "path": "packs/callings.db",
+      "path": "packs/callings",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "minion_upgrade",
       "label": "Minion Upgrades",
       "system": "wicked-ones",
-      "path": "packs/minion_upgrades.db",
+      "path": "packs/minion_upgrades",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "minion_type",
       "label": "Minion Types",
       "system": "wicked-ones",
-      "path": "packs/minion_types.db",
+      "path": "packs/minion_types",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "monster_race",
       "label": "Monster Races",
       "system": "wicked-ones",
-      "path": "packs/monsterraces.db",
+      "path": "packs/monsterraces",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "awakened_type",
       "label": "Awakened Types",
       "system": "wicked-ones",
-      "path": "packs/awakened-types.db",
+      "path": "packs/awakened-types",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "goldmonger_type",
       "label": "Goldmonger Types",
       "system": "wicked-ones",
-      "path": "packs/goldmongertypes.db",
+      "path": "packs/goldmongertypes",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "revelry",
       "label": "Revelries",
       "system": "wicked-ones",
-      "path": "packs/revelries.db",
+      "path": "packs/revelries",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "wickedimpulse",
       "label": "Wicked One Impulses",
       "system": "wicked-ones",
-      "path": "packs/wickedimpulses.db",
+      "path": "packs/wickedimpulses",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "defense",
       "label": "Defenses",
       "system": "wicked-ones",
-      "path": "packs/defenses.db",
+      "path": "packs/defenses",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "minionimpulse",
       "label": "Minion Impulses",
       "system": "wicked-ones",
-      "path": "packs/minionimpulses.db",
+      "path": "packs/minionimpulses",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "gearsupply",
       "label": "Gear & Supply",
       "system": "wicked-ones",
-      "path": "packs/gearsupply.db",
+      "path": "packs/gearsupply",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "duty",
       "label": "Duties",
       "system": "wicked-ones",
-      "path": "packs/duties.db",
+      "path": "packs/duties",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "project",
       "label": "Projects",
       "system": "wicked-ones",
-      "path": "packs/projects.db",
+      "path": "packs/projects",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "specialability",
       "label": "Special Abilities",
       "system": "wicked-ones",
-      "path": "packs/specialabilities.db",
+      "path": "packs/specialabilities",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "conquest_ability",
       "label": "Conquest Abilities (UA)",
       "system": "wicked-ones",
-      "path": "packs/conquestabilities.db",
+      "path": "packs/conquestabilities",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "invasion",
       "label": "Major Invasions",
       "system": "wicked-ones",
-      "path": "packs/invasions.db",
+      "path": "packs/invasions",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "dungeon_theme",
       "label": "Dungeon Themes",
       "system": "wicked-ones",
-      "path": "packs/dungeon_themes.db",
+      "path": "packs/dungeon_themes",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "tier3room",
       "label": "Tier-3 Rooms",
       "system": "wicked-ones",
-      "path": "packs/tier3rooms.db",
+      "path": "packs/tier3rooms",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "rollable-tables",
       "label": "Rollable Tables",
       "system": "wicked-ones",
-      "path": "packs/rollable-tables.db",
+      "path": "packs/rollable-tables",
       "type": "RollTable",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "dungeon-generator",
       "label": "Dungeon Generator",
       "system": "wicked-ones",
-      "path": "packs/dungeon-generator.db",
+      "path": "packs/dungeon-generator",
       "type": "RollTable",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "wo-macros",
       "label": "Macros",
       "system": "wicked-ones",
-      "path": "packs/macros.db",
+      "path": "packs/macros",
       "type": "Macro",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "character",
       "label": "Sample Characters",
       "system": "wicked-ones",
-      "path": "packs/sample-characters.db",
+      "path": "packs/sample-characters",
       "type": "Actor",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "dungeon",
       "label": "Sample Dungeons",
       "system": "wicked-ones",
-      "path": "packs/sample-dungeons.db",
+      "path": "packs/sample-dungeons",
       "type": "Actor",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "minion_pack",
       "label": "Sample Minion Packs",
       "system": "wicked-ones",
-      "path": "packs/sample-minions.db",
+      "path": "packs/sample-minions",
       "type": "Actor",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "party",
       "label": "Sample Adventuring Parties",
       "system": "wicked-ones",
-      "path": "packs/sample-parties.db",
+      "path": "packs/sample-parties",
       "type": "Actor",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "id": "wicked-ones",
   "compatibility": {
     "minimum": "10",
-    "verified": "11.300",
-    "maximum": "12"
+    "verified": "12.328"
   }
 }

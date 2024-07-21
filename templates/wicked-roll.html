@@ -44,6 +44,11 @@
 		{{#if zeromode}}
 			<li class="zero-hint">{{localize "FITD.ZeroModeHint"}}</li>
 		{{/if}}
+		{{#if @root.method}}
+			{{#unless (eq @root.method.type "mersenne")}}
+			<li class="roll method" data-tooltip="{{localize @root.method.label}}">{{{ @root.method.icon }}}</li>
+			{{/unless}}
+		{{/if}}
 	</ol>
 </div>
 

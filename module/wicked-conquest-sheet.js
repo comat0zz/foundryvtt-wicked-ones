@@ -8,7 +8,7 @@ export class WickedConquestSheet extends WickedSheet {
 
   /** @override */
 	static get defaultOptions() {
-	  return mergeObject(super.defaultOptions, {
+	  return foundry.utils.mergeObject(super.defaultOptions, {
           classes: ["wicked-ones", "sheet", "actor"],
           template: "systems/wicked-ones/templates/conquest-sheet.html",
       width: 600,
