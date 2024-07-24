@@ -1,7 +1,7 @@
 <p align="center"><img src="readme-images/WWfoundry.png"></img></p>
 
 # Wicked Ones Game System for Foundry
-### For questions or reporting bugs contact us on Discord: `Spearhead#4288` or `LorduFreeman#8747`.
+### For questions or reporting bugs contact us on Discord: `eiktopus` or `LorduFreeman#8747`.
 
 Link to the [Wicked Ones home page](<https://banditcamp.io/wickedones/> "Wicked Ones – Bandit Camp")
 
