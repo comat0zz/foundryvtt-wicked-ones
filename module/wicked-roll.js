@@ -18,6 +18,7 @@ export async function wickedRoll(dice_amount, attribute_name = "", position = "d
   let r = new Roll( `${dice_amount}d6`, {} );
 
   r.evaluate({async: true});
+
   return await showChatRollMessage(r, zeromode, attribute_name, position, effect, type, char_name, dice3dDelay)
 
 }
@@ -132,6 +133,7 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
     messageData.whisper = ChatMessage.getWhisperRecipients("GM");
   }
   const messageOptions = { rollMode: rMode };
+
   if (game.dice3d && dice3dDelay){
     await game.dice3d.showForRoll(r);
   }
