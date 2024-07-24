@@ -1,13 +1,13 @@
 {
   "title": "Wicked Ones",
   "description": "Official system for the Wicked Ones game made by Bandit Camp. Including official compendium content, all you need to slay some adventurers!",
-  "version": "1.1.2",
+  "version": "WILL BE AUTO REPLACED",
   "background": "systems/wicked-ones/styles/assets/images/WO-Header.webp",
   "authors": [
     {
       "name": "Spearhead",
       "email": "Eike.Hanus@T-Online.de",
-      "discord": "Spearhead#4288",
+      "discord": "eiktopus",
       "flags": {}
     },
     {
@@ -31,8 +31,8 @@
     }
   ],
   "url": "https://github.com/eHanus/foundryvtt-wicked-ones",
-  "manifest": "https://github.com/eHanus/foundryvtt-wicked-ones/releases/latest/download/system.json",
-  "download": "https://github.com/eHanus/foundryvtt-wicked-ones/releases/download/1.1.2/system.zip",
+  "manifest": "https://raw.githubusercontent.com/eHanus/foundryvtt-wicked-ones/releases/latest/download/system.json",
+  "download": "https://github.com/eHanus/foundryvtt-wicked-ones/releases/latest/download/system.zip",
   "packs": [
     {
       "name": "adventurer",
