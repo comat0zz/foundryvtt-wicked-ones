@@ -8,7 +8,7 @@ export class WickedGMSheet extends WickedSheet {
 
   /** @override */
 	static get defaultOptions() {
-	  return mergeObject(super.defaultOptions, {
+	  return foundry.utils.mergeObject(super.defaultOptions, {
           classes: ["wicked-ones", "sheet", "gamemaster"],
           template: "systems/wicked-ones/templates/gm-sheet.html",
       width: 830,

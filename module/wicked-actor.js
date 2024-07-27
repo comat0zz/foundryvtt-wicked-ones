@@ -40,7 +40,7 @@ export class WickedActor extends Actor {
 
       // Special settings for the faction token
       if (data.type == "faction") {
-        mergeObject(
+        foundry.utils.mergeObject(
           data.prototypeToken,
           {
             displayName: 50,

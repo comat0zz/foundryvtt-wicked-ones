@@ -8,7 +8,7 @@ export class WickedFactionUASheet extends WickedSheet {
 
   /** @override */
 	static get defaultOptions() {
-	  return mergeObject(super.defaultOptions, {
+	  return foundry.utils.mergeObject(super.defaultOptions, {
           classes: ["wicked-ones", "sheet", "actor"],
           template: "systems/wicked-ones/templates/faction-ua-sheet.html",
       width: 400,
